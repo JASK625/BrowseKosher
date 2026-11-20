@@ -1,6 +1,6 @@
 # BrowseKosher
 
-An Android web browser that keeps pornography off the screen. Every page and picture is checked on the phone itself, before it is shown. Nothing about your browsing is sent anywhere.
+An Android web browser that keeps explicit content off the screen. Every page and picture is checked on the phone itself, before it is shown. Nothing about your browsing is sent anywhere.
 
 This repository holds the **releases only**: signed APKs, signed filter-list updates and this page. The source code is not public.
 
@@ -8,7 +8,7 @@ This repository holds the **releases only**: signed APKs, signed filter-list upd
 
 People who want a browser that stays clean: for themselves, for a family member, or for a phone given to a child or teenager. It is built to be paired with a device-owner MDM (see below), which keeps the browser in place and other browsers off the phone.
 
-It blocks pornography and explicit sexual content. News, shopping, social media and everything else work as in any browser. Optional settings go further: blur revealing pictures or every picture of people, block social media, gambling, dating or proxy sites, or your own list of sites.
+It blocks explicit content. News, shopping, social media and everything else work as in any browser. Optional settings go further: blur revealing pictures or every picture of people, block social media, gambling, dating or proxy sites, or your own list of sites.
 
 ## Installing
 
@@ -16,7 +16,7 @@ Download the APK for your phone from the [Releases](../../releases) page:
 
 | Your phone | APK |
 | --- | --- |
-| Almost every phone from the last several years (64-bit) | `…-arm64-v8a.apk` |
+| **Most phones** (64-bit, almost every phone from the last several years) | `…-arm64-v8a.apk` |
 | Older or low-cost phones, flip phones (32-bit) | `…-armeabi-v7a.apk` |
 
 If you aren't sure, try the 64-bit one; Android refuses it on a 32-bit phone. A 64-bit phone that has the 32-bit APK is moved to the 64-bit one by its first update.
@@ -52,7 +52,7 @@ Optional: a filtering DNS (NextDNS, CleanBrowsing and similar) set as the phone'
 
 Every page passes a series of checks, cheapest first. Most pages are settled by the first few in a moment, and the results are remembered so the next visit is faster.
 
-**Before a page loads: the lists.** The address, and every address the page then asks for, is checked against a list of about 4.7 million known porn domains, built from public lists. Links to torrents are refused. You can add your own sites, or subscribe to a block list, and turn on ready-made categories (social media, gambling, dating, proxy and VPN sites).
+**Before a page loads: the lists.** The address, and every address the page then asks for, is checked against a list of about 4.7 million known explicit sites, built from public lists. Links to torrents are refused. You can add your own sites, or subscribe to a block list, and turn on ready-made categories (social media, gambling, dating, proxy and VPN sites).
 
 **SafeSearch and site profiles.** Google, Bing, DuckDuckGo, Yahoo and Brave Search always run with SafeSearch on. YouTube runs in Restricted Mode. Reddit's adult communities are blocked, and X opens as text only. Each site can be given a stricter profile: every picture checked, text only, or no downloads.
 
