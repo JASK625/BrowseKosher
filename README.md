@@ -21,6 +21,8 @@ Download the APK for your phone from the [Releases](../../releases) page:
 
 If you aren't sure, try the 64-bit one; Android refuses it on a 32-bit phone. A 64-bit phone that has the 32-bit APK is moved to the 64-bit one by its first update.
 
+The releases named `lists-…` and `update-manifest` are data the app downloads by itself. There's nothing in them to install.
+
 Needs Android 11 or newer.
 
 **Free space:** about twice the APK's size. Android unpacks the browser engine's libraries when it installs the app, so the installed app takes more room than the download.
@@ -74,7 +76,7 @@ Every page passes a series of checks, cheapest first. Most pages are settled by 
 
 **The PIN.** Tightening anything is free. Loosening anything (a setting, an allowed site, an unsure picture) needs a PIN, ideally one the person browsing doesn't know. Wrong guesses lock the PIN for longer and longer, and changing the phone's clock doesn't shorten the wait.
 
-**Updates, signed and checked on the phone.** Filter lists and models are updated weekly and the app itself about monthly, all downloaded from this repository. Every update is signed, and the phone checks the signature, the size and the SHA-256 of every file before using it. It refuses anything older than what it has, anything that shrinks the lists a lot, and any app update that isn't signed with the same key. App updates never install by themselves: Android always asks first.
+**Updates, signed and checked on the phone.** Filter lists are updated weekly and the app itself (with its picture and text models) about monthly, all downloaded from this repository. Every update is signed, and the phone checks the signature, the size and the SHA-256 of every file before using it. It refuses anything older than what it has, anything that shrinks the lists a lot, and any app update that isn't signed with the same key. App updates never install by themselves: Android always asks first.
 
 **Keep settings after a reset.** When a PIN is set, the owner can turn this on. The settings and PIN are then encrypted on the phone and a copy kept with the check-in service (see the [privacy note](PRIVACY.md)). The key that unlocks them never leaves the phone, so the service can't read them. If the app's data is cleared or the app reinstalled, it puts everything back, and until it has asked, nothing can be loosened. A factory reset ends it.
 
