@@ -54,7 +54,7 @@ Every page passes a series of checks, cheapest first. Most pages are settled by 
 
 **Before a page loads: the lists.** The address, and every address the page then asks for, is checked against a list of about 4.7 million known explicit sites, built from public lists. Links to torrents are refused. You can add your own sites, or subscribe to a block list, and turn on ready-made categories (social media, gambling, dating, proxy and VPN sites).
 
-**SafeSearch and site profiles.** Google, Bing, DuckDuckGo, Yahoo and Brave Search always run with SafeSearch on. YouTube runs in Restricted Mode. Reddit's adult communities are blocked, and X opens as text only by default. Each site can be given a stricter profile: every picture checked, text only, or no downloads.
+**SafeSearch and site profiles.** Google, Bing, DuckDuckGo, Yahoo and Brave Search always run with SafeSearch on. YouTube runs in Restricted Mode. Reddit's communities marked NSFW are blocked, and X opens as text only by default. Each site can be given a stricter profile: every picture checked, text only, or no downloads.
 
 **Adult signals.** As the page's first bytes arrive, it is checked for the labels adult sites put on themselves: rating tags, age-verification gates, the notices adult sites are required to carry, and explicit words in the title and address. A clear signal blocks the page.
 
