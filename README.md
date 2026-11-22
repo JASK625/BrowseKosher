@@ -2,11 +2,11 @@
 
 An Android web browser that keeps explicit content off the screen. Every page and picture is checked on the phone itself, before it is shown. Nothing about your browsing is sent anywhere.
 
-This repository holds the **releases only**: signed APKs, signed filter-list updates and this page. The source code is not public.
+This repository holds the **releases only**: signed APKs, signed filter-list updates and this page.
 
 ## Who it's for
 
-People who want a browser that stays clean: for themselves, for a family member, or for a phone given to a child or teenager. It is built to be paired with a device-owner MDM (see below), which keeps the browser in place and other browsers off the phone.
+People who want a free browser that stays clean without their data being sent anywhere. It is built to be paired with a device-owner MDM (see below), which keeps the browser in place and other browsers off the phone.
 
 It blocks explicit content. News, shopping, social media and everything else work as in any browser. Optional settings go further: blur revealing pictures or every picture of people, block social media, gambling, dating or proxy sites, or your own list of sites.
 
@@ -17,7 +17,7 @@ Download the APK for your phone from the [Releases](../../releases) page:
 | Your phone | APK |
 | --- | --- |
 | **Most phones** (64-bit, almost every phone from the last several years) | `…-arm64-v8a.apk` |
-| Older or low-cost phones, flip phones (32-bit) | `…-armeabi-v7a.apk` |
+| Older or low-end phones, flip phones (32-bit) | `…-armeabi-v7a.apk` |
 
 If you aren't sure, try the 64-bit one; Android refuses it on a 32-bit phone. A 64-bit phone that has the 32-bit APK is moved to the 64-bit one by its first update.
 
@@ -39,9 +39,7 @@ Most of it is two things every page needs, and both live on the phone. Sizes as 
 
 A browser can only filter what it shows. Someone who can uninstall it, clear its data or open another browser is past it in a few taps. BrowseKosher is meant to be paired with a **device-owner MDM** (a device management app that controls the phone) that applies these policies:
 
-- Block uninstalling BrowseKosher (`com.browsekosher`).
-- Block "Clear storage" and force stop for it (Android 11+).
-- An app allowlist: no other browsers (disable the phone's own, too) and no torrent apps.
+- An app allowlist: no other browsers (disable the phone's own, too).
 - Block installing apps from unknown sources.
 - Disable USB debugging and developer options, safe mode, and adding users or guests.
 - Set BrowseKosher as the default browser, so links from other apps open in it.
@@ -56,7 +54,7 @@ Every page passes a series of checks, cheapest first. Most pages are settled by 
 
 **Before a page loads: the lists.** The address, and every address the page then asks for, is checked against a list of about 4.7 million known explicit sites, built from public lists. Links to torrents are refused. You can add your own sites, or subscribe to a block list, and turn on ready-made categories (social media, gambling, dating, proxy and VPN sites).
 
-**SafeSearch and site profiles.** Google, Bing, DuckDuckGo, Yahoo and Brave Search always run with SafeSearch on. YouTube runs in Restricted Mode. Reddit's adult communities are blocked, and X opens as text only. Each site can be given a stricter profile: every picture checked, text only, or no downloads.
+**SafeSearch and site profiles.** Google, Bing, DuckDuckGo, Yahoo and Brave Search always run with SafeSearch on. YouTube runs in Restricted Mode. Reddit's adult communities are blocked, and X opens as text only by default. Each site can be given a stricter profile: every picture checked, text only, or no downloads.
 
 **Adult signals.** As the page's first bytes arrive, it is checked for the labels adult sites put on themselves: rating tags, age-verification gates, the notices adult sites are required to carry, and explicit words in the title and address. A clear signal blocks the page.
 
@@ -74,7 +72,7 @@ Every page passes a series of checks, cheapest first. Most pages are settled by 
 
 **Fail closed.** If any check fails, times out or can't decide, the content stays hidden. A page that couldn't be checked is not shown.
 
-**The PIN.** Tightening anything is free. Loosening anything (a setting, an allowed site, an unsure picture) needs a PIN, ideally one the person browsing doesn't know. Wrong guesses lock the PIN for longer and longer, and changing the phone's clock doesn't shorten the wait.
+**The PIN.** Tightening anything is free. Loosening anything (a setting, an allowed site, an unsure picture) needs a PIN, ideally one the person browsing doesn't know.
 
 **Updates, signed and checked on the phone.** Filter lists are updated weekly and the app itself (with its picture and text models) about monthly, all downloaded from this repository. Every update is signed, and the phone checks the signature, the size and the SHA-256 of every file before using it. It refuses anything older than what it has, anything that shrinks the lists a lot, and any app update that isn't signed with the same key. App updates never install by themselves: Android always asks first.
 
